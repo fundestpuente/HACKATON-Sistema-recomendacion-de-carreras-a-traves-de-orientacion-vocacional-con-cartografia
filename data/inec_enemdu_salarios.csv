@@ -1,0 +1,193 @@
+﻿trimestre,sector_economico,nivel_educacion,salario_promedio_mensual,tasa_empleo_formal,tasa_desempleo,empleados_estimados,crecimiento_anual
+2023-Q1,Información y Comunicación,Educación Superior Universitaria,1470,80.96,3.82,15044,15.0
+2023-Q1,Información y Comunicación,Educación Superior Tecnológica,1113,86.5,5.39,8912,15.0
+2023-Q1,Información y Comunicación,Educación Media,719,81.0,7.55,27740,15.0
+2023-Q1,Información y Comunicación,Educación Básica,483,82.44,12.36,29522,15.0
+2023-Q1,Actividades Financieras,Educación Superior Universitaria,1341,90.8,4.25,5292,8.0
+2023-Q1,Actividades Financieras,Educación Superior Tecnológica,1066,91.78,4.84,11996,8.0
+2023-Q1,Actividades Financieras,Educación Media,721,88.53,7.35,9352,8.0
+2023-Q1,Actividades Financieras,Educación Básica,499,90.93,12.74,37837,8.0
+2023-Q1,Actividades Profesionales y Técnicas,Educación Superior Universitaria,1254,78.55,3.9,29841,12.0
+2023-Q1,Actividades Profesionales y Técnicas,Educación Superior Tecnológica,968,75.89,5.36,30980,12.0
+2023-Q1,Actividades Profesionales y Técnicas,Educación Media,637,71.59,7.56,18022,12.0
+2023-Q1,Actividades Profesionales y Técnicas,Educación Básica,419,73.0,11.04,17508,12.0
+2023-Q1,Salud Humana,Educación Superior Universitaria,1196,80.89,3.9,14427,10.0
+2023-Q1,Salud Humana,Educación Superior Tecnológica,864,85.58,5.15,32410,10.0
+2023-Q1,Salud Humana,Educación Media,570,83.88,7.46,22075,10.0
+2023-Q1,Salud Humana,Educación Básica,433,83.15,12.14,35807,10.0
+2023-Q1,Industrias Manufactureras,Educación Superior Universitaria,982,71.93,3.78,6444,5.0
+2023-Q1,Industrias Manufactureras,Educación Superior Tecnológica,699,68.37,4.71,47430,5.0
+2023-Q1,Industrias Manufactureras,Educación Media,492,68.7,8.25,22803,5.0
+2023-Q1,Industrias Manufactureras,Educación Básica,346,69.71,11.44,16098,5.0
+2023-Q1,Construcción,Educación Superior Universitaria,885,53.7,4.07,45402,3.0
+2023-Q1,Construcción,Educación Superior Tecnológica,653,53.46,5.5,27928,3.0
+2023-Q1,Construcción,Educación Media,422,52.51,7.38,33235,3.0
+2023-Q1,Construcción,Educación Básica,316,54.57,10.95,22172,3.0
+2023-Q1,Educación,Educación Superior Universitaria,965,88.26,4.38,43735,2.0
+2023-Q1,Educación,Educación Superior Tecnológica,656,89.94,5.18,29163,2.0
+2023-Q1,Educación,Educación Media,449,89.24,7.38,24564,2.0
+2023-Q1,Educación,Educación Básica,320,91.99,12.9,16852,2.0
+2023-Q1,Comercio al por Mayor y Menor,Educación Superior Universitaria,780,43.55,4.33,44173,4.0
+2023-Q1,Comercio al por Mayor y Menor,Educación Superior Tecnológica,573,45.63,5.11,11877,4.0
+2023-Q1,Comercio al por Mayor y Menor,Educación Media,400,45.18,8.45,28865,4.0
+2023-Q1,Comercio al por Mayor y Menor,Educación Básica,259,44.21,10.85,46809,4.0
+2023-Q1,Transporte y Almacenamiento,Educación Superior Universitaria,882,53.72,3.85,7606,6.0
+2023-Q1,Transporte y Almacenamiento,Educación Superior Tecnológica,661,54.32,4.59,26869,6.0
+2023-Q1,Transporte y Almacenamiento,Educación Media,406,53.36,8.43,10777,6.0
+2023-Q1,Transporte y Almacenamiento,Educación Básica,296,52.26,11.44,44259,6.0
+2023-Q1,Actividades Administrativas,Educación Superior Universitaria,714,46.62,4.03,37846,7.0
+2023-Q1,Actividades Administrativas,Educación Superior Tecnológica,523,47.1,5.5,34244,7.0
+2023-Q1,Actividades Administrativas,Educación Media,357,48.08,7.39,15111,7.0
+2023-Q1,Actividades Administrativas,Educación Básica,247,48.42,11.35,14909,7.0
+2023-Q1,Agricultura y Ganadería,Educación Superior Universitaria,497,25.33,3.78,45743,1.0
+2023-Q1,Agricultura y Ganadería,Educación Superior Tecnológica,404,23.93,4.74,35104,1.0
+2023-Q1,Agricultura y Ganadería,Educación Media,252,24.08,8.7,30696,1.0
+2023-Q1,Agricultura y Ganadería,Educación Básica,181,25.71,12.74,13568,1.0
+2023-Q1,Alojamiento y Servicios de Comida,Educación Superior Universitaria,623,34.76,3.94,26016,9.0
+2023-Q1,Alojamiento y Servicios de Comida,Educación Superior Tecnológica,498,35.61,5.48,9428,9.0
+2023-Q1,Alojamiento y Servicios de Comida,Educación Media,321,34.44,8.58,16189,9.0
+2023-Q1,Alojamiento y Servicios de Comida,Educación Básica,220,34.82,11.81,17534,9.0
+2023-Q2,Información y Comunicación,Educación Superior Universitaria,1413,88.6,3.95,43760,15.0
+2023-Q2,Información y Comunicación,Educación Superior Tecnológica,1092,81.18,5.5,42621,15.0
+2023-Q2,Información y Comunicación,Educación Media,759,88.62,8.56,12483,15.0
+2023-Q2,Información y Comunicación,Educación Básica,506,82.57,11.76,7638,15.0
+2023-Q2,Actividades Financieras,Educación Superior Universitaria,1363,94.37,3.81,40283,8.0
+2023-Q2,Actividades Financieras,Educación Superior Tecnológica,1030,89.31,5.46,49794,8.0
+2023-Q2,Actividades Financieras,Educación Media,693,91.97,7.45,18351,8.0
+2023-Q2,Actividades Financieras,Educación Básica,505,90.71,12.1,38658,8.0
+2023-Q2,Actividades Profesionales y Técnicas,Educación Superior Universitaria,1194,75.63,4.0,43372,12.0
+2023-Q2,Actividades Profesionales y Técnicas,Educación Superior Tecnológica,905,78.46,4.58,13362,12.0
+2023-Q2,Actividades Profesionales y Técnicas,Educación Media,630,76.31,7.58,10394,12.0
+2023-Q2,Actividades Profesionales y Técnicas,Educación Básica,454,73.1,12.23,32872,12.0
+2023-Q2,Salud Humana,Educación Superior Universitaria,1170,82.69,4.02,47061,10.0
+2023-Q2,Salud Humana,Educación Superior Tecnológica,858,83.77,4.74,22810,10.0
+2023-Q2,Salud Humana,Educación Media,600,80.36,7.71,38833,10.0
+2023-Q2,Salud Humana,Educación Básica,395,81.66,13.2,49824,10.0
+2023-Q2,Industrias Manufactureras,Educación Superior Universitaria,909,67.99,3.81,46996,5.0
+2023-Q2,Industrias Manufactureras,Educación Superior Tecnológica,739,72.65,4.87,12098,5.0
+2023-Q2,Industrias Manufactureras,Educación Media,490,71.42,8.18,49425,5.0
+2023-Q2,Industrias Manufactureras,Educación Básica,337,66.55,12.76,18472,5.0
+2023-Q2,Construcción,Educación Superior Universitaria,894,57.41,3.71,10194,3.0
+2023-Q2,Construcción,Educación Superior Tecnológica,634,55.29,4.77,32217,3.0
+2023-Q2,Construcción,Educación Media,449,53.37,8.21,16879,3.0
+2023-Q2,Construcción,Educación Básica,307,57.23,12.83,9153,3.0
+2023-Q2,Educación,Educación Superior Universitaria,912,86.03,3.6,39700,2.0
+2023-Q2,Educación,Educación Superior Tecnológica,699,85.91,5.24,29825,2.0
+2023-Q2,Educación,Educación Media,456,83.69,7.32,44739,2.0
+2023-Q2,Educación,Educación Básica,335,88.4,12.8,31212,2.0
+2023-Q2,Comercio al por Mayor y Menor,Educación Superior Universitaria,752,43.32,3.85,45454,4.0
+2023-Q2,Comercio al por Mayor y Menor,Educación Superior Tecnológica,602,46.62,5.4,14453,4.0
+2023-Q2,Comercio al por Mayor y Menor,Educación Media,380,43.21,8.45,44786,4.0
+2023-Q2,Comercio al por Mayor y Menor,Educación Básica,270,45.54,11.17,46844,4.0
+2023-Q2,Transporte y Almacenamiento,Educación Superior Universitaria,880,54.48,4.25,44663,6.0
+2023-Q2,Transporte y Almacenamiento,Educación Superior Tecnológica,607,53.23,4.83,46886,6.0
+2023-Q2,Transporte y Almacenamiento,Educación Media,437,53.89,8.5,17006,6.0
+2023-Q2,Transporte y Almacenamiento,Educación Básica,306,49.96,12.89,43636,6.0
+2023-Q2,Actividades Administrativas,Educación Superior Universitaria,700,49.52,3.97,18733,7.0
+2023-Q2,Actividades Administrativas,Educación Superior Tecnológica,555,46.69,4.52,13690,7.0
+2023-Q2,Actividades Administrativas,Educación Media,353,49.75,8.75,17560,7.0
+2023-Q2,Actividades Administrativas,Educación Básica,255,47.52,13.15,29129,7.0
+2023-Q2,Agricultura y Ganadería,Educación Superior Universitaria,542,24.04,4.38,13035,1.0
+2023-Q2,Agricultura y Ganadería,Educación Superior Tecnológica,408,24.41,4.61,24555,1.0
+2023-Q2,Agricultura y Ganadería,Educación Media,265,24.53,8.17,28014,1.0
+2023-Q2,Agricultura y Ganadería,Educación Básica,179,25.19,11.41,36895,1.0
+2023-Q2,Alojamiento y Servicios de Comida,Educación Superior Universitaria,617,36.49,4.03,37374,9.0
+2023-Q2,Alojamiento y Servicios de Comida,Educación Superior Tecnológica,499,35.6,4.86,8148,9.0
+2023-Q2,Alojamiento y Servicios de Comida,Educación Media,330,34.41,7.7,43160,9.0
+2023-Q2,Alojamiento y Servicios de Comida,Educación Básica,232,34.3,11.54,23377,9.0
+2023-Q3,Información y Comunicación,Educación Superior Universitaria,1435,83.26,3.7,23920,15.0
+2023-Q3,Información y Comunicación,Educación Superior Tecnológica,1135,86.51,5.4,32698,15.0
+2023-Q3,Información y Comunicación,Educación Media,710,85.41,7.2,17911,15.0
+2023-Q3,Información y Comunicación,Educación Básica,503,85.68,12.37,25924,15.0
+2023-Q3,Actividades Financieras,Educación Superior Universitaria,1372,87.42,3.98,45553,8.0
+2023-Q3,Actividades Financieras,Educación Superior Tecnológica,1065,87.03,4.58,28195,8.0
+2023-Q3,Actividades Financieras,Educación Media,699,88.52,8.51,38801,8.0
+2023-Q3,Actividades Financieras,Educación Básica,491,87.52,11.28,6099,8.0
+2023-Q3,Actividades Profesionales y Técnicas,Educación Superior Universitaria,1218,74.81,4.28,8277,12.0
+2023-Q3,Actividades Profesionales y Técnicas,Educación Superior Tecnológica,929,75.97,4.69,36335,12.0
+2023-Q3,Actividades Profesionales y Técnicas,Educación Media,624,73.08,8.25,5249,12.0
+2023-Q3,Actividades Profesionales y Técnicas,Educación Básica,448,77.03,11.06,24131,12.0
+2023-Q3,Salud Humana,Educación Superior Universitaria,1141,85.76,4.01,7259,10.0
+2023-Q3,Salud Humana,Educación Superior Tecnológica,862,84.86,4.96,41063,10.0
+2023-Q3,Salud Humana,Educación Media,599,86.0,8.15,47751,10.0
+2023-Q3,Salud Humana,Educación Básica,429,82.92,12.53,27715,10.0
+2023-Q3,Industrias Manufactureras,Educación Superior Universitaria,981,70.34,4.32,38464,5.0
+2023-Q3,Industrias Manufactureras,Educación Superior Tecnológica,710,68.31,4.75,33694,5.0
+2023-Q3,Industrias Manufactureras,Educación Media,487,70.15,8.2,17356,5.0
+2023-Q3,Industrias Manufactureras,Educación Básica,318,68.5,11.45,19386,5.0
+2023-Q3,Construcción,Educación Superior Universitaria,883,53.01,3.79,36227,3.0
+2023-Q3,Construcción,Educación Superior Tecnológica,673,52.6,4.91,29417,3.0
+2023-Q3,Construcción,Educación Media,436,53.39,7.87,45717,3.0
+2023-Q3,Construcción,Educación Básica,310,56.08,12.86,39451,3.0
+2023-Q3,Educación,Educación Superior Universitaria,908,83.65,3.88,38906,2.0
+2023-Q3,Educación,Educación Superior Tecnológica,714,91.99,4.92,38638,2.0
+2023-Q3,Educación,Educación Media,462,88.91,7.55,14873,2.0
+2023-Q3,Educación,Educación Básica,319,83.86,11.61,35561,2.0
+2023-Q3,Comercio al por Mayor y Menor,Educación Superior Universitaria,772,43.49,3.97,10743,4.0
+2023-Q3,Comercio al por Mayor y Menor,Educación Superior Tecnológica,592,42.87,4.89,30397,4.0
+2023-Q3,Comercio al por Mayor y Menor,Educación Media,371,45.64,7.42,25776,4.0
+2023-Q3,Comercio al por Mayor y Menor,Educación Básica,260,44.46,11.31,19708,4.0
+2023-Q3,Transporte y Almacenamiento,Educación Superior Universitaria,872,51.37,4.2,42436,6.0
+2023-Q3,Transporte y Almacenamiento,Educación Superior Tecnológica,621,49.83,4.52,29273,6.0
+2023-Q3,Transporte y Almacenamiento,Educación Media,446,51.22,8.24,40155,6.0
+2023-Q3,Transporte y Almacenamiento,Educación Básica,302,53.32,13.08,13971,6.0
+2023-Q3,Actividades Administrativas,Educación Superior Universitaria,685,46.33,3.7,35125,7.0
+2023-Q3,Actividades Administrativas,Educación Superior Tecnológica,543,46.65,5.2,39510,7.0
+2023-Q3,Actividades Administrativas,Educación Media,348,48.51,8.4,10153,7.0
+2023-Q3,Actividades Administrativas,Educación Básica,260,50.23,11.06,6155,7.0
+2023-Q3,Agricultura y Ganadería,Educación Superior Universitaria,510,25.44,4.37,22849,1.0
+2023-Q3,Agricultura y Ganadería,Educación Superior Tecnológica,398,23.94,5.19,33225,1.0
+2023-Q3,Agricultura y Ganadería,Educación Media,249,25.68,8.56,32018,1.0
+2023-Q3,Agricultura y Ganadería,Educación Básica,175,26.21,12.68,20624,1.0
+2023-Q3,Alojamiento y Servicios de Comida,Educación Superior Universitaria,645,34.55,4.0,20355,9.0
+2023-Q3,Alojamiento y Servicios de Comida,Educación Superior Tecnológica,504,36.13,4.61,48235,9.0
+2023-Q3,Alojamiento y Servicios de Comida,Educación Media,329,36.15,8.33,24596,9.0
+2023-Q3,Alojamiento y Servicios de Comida,Educación Básica,232,36.63,11.45,41368,9.0
+2023-Q4,Información y Comunicación,Educación Superior Universitaria,1455,84.86,3.95,37896,15.0
+2023-Q4,Información y Comunicación,Educación Superior Tecnológica,1062,87.99,5.33,8899,15.0
+2023-Q4,Información y Comunicación,Educación Media,752,82.82,7.94,32464,15.0
+2023-Q4,Información y Comunicación,Educación Básica,501,80.99,12.84,13182,15.0
+2023-Q4,Actividades Financieras,Educación Superior Universitaria,1340,92.68,3.87,44614,8.0
+2023-Q4,Actividades Financieras,Educación Superior Tecnológica,1055,87.99,4.51,47662,8.0
+2023-Q4,Actividades Financieras,Educación Media,661,91.98,7.98,39117,8.0
+2023-Q4,Actividades Financieras,Educación Básica,492,91.31,11.98,40681,8.0
+2023-Q4,Actividades Profesionales y Técnicas,Educación Superior Universitaria,1199,72.91,4.15,18779,12.0
+2023-Q4,Actividades Profesionales y Técnicas,Educación Superior Tecnológica,945,74.8,5.03,24147,12.0
+2023-Q4,Actividades Profesionales y Técnicas,Educación Media,640,73.73,8.32,17191,12.0
+2023-Q4,Actividades Profesionales y Técnicas,Educación Básica,426,72.15,11.26,10379,12.0
+2023-Q4,Salud Humana,Educación Superior Universitaria,1184,84.15,3.75,14737,10.0
+2023-Q4,Salud Humana,Educación Superior Tecnológica,883,83.84,5.48,28608,10.0
+2023-Q4,Salud Humana,Educación Media,577,78.72,7.51,15236,10.0
+2023-Q4,Salud Humana,Educación Básica,399,78.02,12.08,17344,10.0
+2023-Q4,Industrias Manufactureras,Educación Superior Universitaria,995,70.37,4.16,10682,5.0
+2023-Q4,Industrias Manufactureras,Educación Superior Tecnológica,738,69.94,5.37,30832,5.0
+2023-Q4,Industrias Manufactureras,Educación Media,473,69.58,7.49,7311,5.0
+2023-Q4,Industrias Manufactureras,Educación Básica,347,69.84,12.77,23031,5.0
+2023-Q4,Construcción,Educación Superior Universitaria,842,55.71,3.64,11713,3.0
+2023-Q4,Construcción,Educación Superior Tecnológica,664,53.92,5.49,10330,3.0
+2023-Q4,Construcción,Educación Media,451,55.58,8.47,15155,3.0
+2023-Q4,Construcción,Educación Básica,308,54.73,11.86,43707,3.0
+2023-Q4,Educación,Educación Superior Universitaria,965,86.29,4.1,32433,2.0
+2023-Q4,Educación,Educación Superior Tecnológica,706,91.94,4.71,14496,2.0
+2023-Q4,Educación,Educación Media,467,84.98,7.48,8377,2.0
+2023-Q4,Educación,Educación Básica,305,87.56,12.23,18106,2.0
+2023-Q4,Comercio al por Mayor y Menor,Educación Superior Universitaria,759,45.93,4.16,25431,4.0
+2023-Q4,Comercio al por Mayor y Menor,Educación Superior Tecnológica,595,46.91,5.29,33127,4.0
+2023-Q4,Comercio al por Mayor y Menor,Educación Media,396,46.95,7.88,29505,4.0
+2023-Q4,Comercio al por Mayor y Menor,Educación Básica,277,46.84,12.78,8213,4.0
+2023-Q4,Transporte y Almacenamiento,Educación Superior Universitaria,821,51.0,4.2,30614,6.0
+2023-Q4,Transporte y Almacenamiento,Educación Superior Tecnológica,624,50.05,5.19,36488,6.0
+2023-Q4,Transporte y Almacenamiento,Educación Media,443,52.0,7.99,8619,6.0
+2023-Q4,Transporte y Almacenamiento,Educación Básica,283,51.65,11.57,16266,6.0
+2023-Q4,Actividades Administrativas,Educación Superior Universitaria,690,50.22,4.27,30883,7.0
+2023-Q4,Actividades Administrativas,Educación Superior Tecnológica,564,50.4,5.17,17127,7.0
+2023-Q4,Actividades Administrativas,Educación Media,343,49.23,7.95,34317,7.0
+2023-Q4,Actividades Administrativas,Educación Básica,262,46.47,12.2,33565,7.0
+2023-Q4,Agricultura y Ganadería,Educación Superior Universitaria,519,23.98,3.88,19998,1.0
+2023-Q4,Agricultura y Ganadería,Educación Superior Tecnológica,396,25.89,4.83,36215,1.0
+2023-Q4,Agricultura y Ganadería,Educación Media,254,26.11,8.5,29754,1.0
+2023-Q4,Agricultura y Ganadería,Educación Básica,181,24.54,11.58,48658,1.0
+2023-Q4,Alojamiento y Servicios de Comida,Educación Superior Universitaria,643,35.05,4.39,34594,9.0
+2023-Q4,Alojamiento y Servicios de Comida,Educación Superior Tecnológica,489,34.7,4.69,21280,9.0
+2023-Q4,Alojamiento y Servicios de Comida,Educación Media,333,35.44,8.42,14160,9.0
+2023-Q4,Alojamiento y Servicios de Comida,Educación Básica,228,36.5,11.85,36421,9.0
