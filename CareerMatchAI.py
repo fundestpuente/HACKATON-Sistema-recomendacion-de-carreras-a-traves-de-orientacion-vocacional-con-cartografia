@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-# --- IMPORTACIÓN DE MÓDULOS ---
+# --- IMPORTACIÓN DE MÓDULOS PROPIOS DEL PROYECTO ---
 from src.data_manager import DataManager
 from src.nlp_module import NLPRecommender
 from src.clustering_module import CareerClusterer, plot_clusters_3d
@@ -181,7 +181,7 @@ elif opcion == "🔍 Recomendador Vocacional":
                     # Definir color según categoría
                     color = "#00CC96" if row['categoria'] == "En Demanda" else "#EF553B" if row['categoria'] == "Saturada" else "#636EFA"
                     
-                    # CORRECCIÓN AQUÍ: Usamos los nombres de columna reales del DataFrame (raw names)
+                    # Usamos los nombres de columna reales del DataFrame (raw names)
                     # sector_economico en lugar de Sector (INEC)
                     # salario_oferta en lugar de Salario Ref.
                     
@@ -226,7 +226,6 @@ elif opcion == "🔮 Simulador Futuro":
         st.markdown(f"""
         <div style="text-align:center; padding:20px; border:2px solid {color}; border-radius:10px;">
             <h2 style="color:{color}; margin:0;">{pred}</h2>
-            <p>Predicción basada en reglas de mercado sintéticas.</p>
         </div>
         """, unsafe_allow_html=True)
         
