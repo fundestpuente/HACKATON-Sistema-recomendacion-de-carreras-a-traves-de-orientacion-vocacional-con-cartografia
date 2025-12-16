@@ -202,25 +202,28 @@ def obtener_universidades(df, keywords):
     )
     carreras_filtradas = df[mask]
     
-    # Agrupar por universidad
+    # Agrupar por universidad y provincia
     universidades = []
-    for universidad in carreras_filtradas['universidad'].unique():
-        datos_uni = carreras_filtradas[carreras_filtradas['universidad'] == universidad]
+    for (universidad, provincia) in carreras_filtradas.groupby(['universidad', 'provincia']).groups.keys():
+        datos_uni = carreras_filtradas[
+            (carreras_filtradas['universidad'] == universidad) & 
+            (carreras_filtradas['provincia'] == provincia)
+        ]
         
         universidades.append({
             'nombre': universidad,
-            'carreras': datos_uni['carrera'].unique().tolist(),
-            'provincias': datos_uni['provincia'].unique().tolist()
+            'provincia': provincia,
+            'carreras': datos_uni['carrera'].unique().tolist()
         })
     
     # Ordenar por número de carreras
     universidades.sort(key=lambda x: len(x['carreras']), reverse=True)
     
-    return universidades[:10]  # Top 10
+    return universidades[:15]  # Top 15
 
 def mostrar_quiz():
     """Función principal del quiz"""
-    st.title("🎯 Test de Orientación Vocacional")
+    st.title("Test de Orientación Vocacional")
     
     # Inicializar estado
     inicializar_estado()
@@ -251,9 +254,10 @@ def mostrar_quiz():
         
         if universidades:
             for uni in universidades:
-                with st.expander(f"📍 {uni['nombre']} - {len(uni['carreras'])} carreras"):
-                    st.write("**Provincias:** " + ", ".join(uni['provincias']))
-                    st.write("**Carreras disponibles:**")
+                with st.expander(f"📍 {uni['nombre']} - {uni['provincia']}"):
+                    st.write(f"**📌 Ubicación:** {uni['provincia']}")
+                    st.write(f"** Carreras disponibles:** {len(uni['carreras'])}")
+                    st.divider()
                     for carrera in uni['carreras']:
                         st.write(f"• {carrera}")
         else:
@@ -268,7 +272,6 @@ def mostrar_quiz():
         st.success("✅ Test completado")
         st.subheader("Tus Resultados")
         st.write("Basado en tus respuestas, estas son las áreas profesionales que mejor se ajustan a tu perfil.")
-        st.info("💡 Haz clic en cada área para ver las universidades que ofrecen estas carreras")
         
         st.divider()
         
@@ -309,7 +312,7 @@ def mostrar_quiz():
     st.divider()
     
     # Pregunta
-    st.subheader(f"❓ {pregunta_actual['pregunta']}")
+    st.subheader(f"{pregunta_actual['pregunta']}")
     
     # Opciones
     respuesta = st.radio(
