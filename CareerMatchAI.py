@@ -7,6 +7,7 @@ from src.nlp_module import NLPRecommender
 from src.clustering_module import CareerClusterer, plot_clusters_3d
 from src.prediction_module import CareerPredictor
 from src.eda_module import EDAModule
+import src.map_module
 import quizz
 
 # --- CONFIGURACIÓN DE PÁGINA ---
@@ -234,12 +235,36 @@ elif opcion == "🔮 Simulador Futuro":
         st.write("##### Probabilidades:")
         st.bar_chart(pd.DataFrame.from_dict(probs, orient='index', columns=['%']))
 
-# --- PÁGINA: TEST VOCACIONAL ---
+# --- PÁGINA: TEST VOCACIONAL + MAPA ---
 elif opcion == "📝 Test Vocacional":
     try:
-        # Ejecutamos la función de quizz.py
+        # 1. Ejecutar el Test
         quizz.mostrar_quiz()
+        
+        # 2. Verificar si hay resultados seleccionados para mostrar el mapa
+        # Accedemos al estado de sesión que maneja 'test.py'
+        if 'categoria_seleccionada' in st.session_state and st.session_state.categoria_seleccionada:
+            
+            st.markdown("---")
+            st.header("🗺️ Geolocalización de Oferta Académica")
+            
+            # Obtenemos los datos necesarios del estado
+            categoria = st.session_state.categoria_seleccionada
+            keywords = categoria['keywords']
+            nombre_cat = categoria['nombre']
+            
+            # Pasamos el DataFrame crudo que ya tenemos cargado (eda_engine.df_matricula)
+            # Asegúrate de usar el dataframe correcto disponible en tu scope
+            if 'eda_engine' in locals() and eda_engine is not None:
+                 map_module.generar_mapa_oferta(eda_engine.df_matricula, keywords, nombre_cat)
+            else:
+                 # Fallback si eda_engine no está instanciado localmente (ej. recarga de página)
+                 dm_temp = DataManager()
+                 # Nota: idealmente esto ya está en caché, no debería tardar
+                 if dm_temp.load_data('matricula_senescyt_2015_2023.csv', 'encuentra_empleo_ofertas_2.csv', 'inec_enemdu_salarios.csv'):
+                     map_module.generar_mapa_oferta(dm_temp.df_matricula, keywords, nombre_cat)
+            
     except AttributeError:
-        st.error("Error: No se encontró la función 'mostrar_quiz' en test.py.")
+        st.error("Error: Verifica que 'test.py' y 'map_module.py' estén en la carpeta correcta.")
     except Exception as e:
-        st.error(f"Ocurrió un error al cargar el test: {e}")
+        st.error(f"Ocurrió un error al cargar el módulo: {e}")
