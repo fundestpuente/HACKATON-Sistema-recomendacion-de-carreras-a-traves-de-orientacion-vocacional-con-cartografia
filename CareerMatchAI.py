@@ -246,7 +246,7 @@ elif opcion == "📝 Test Vocacional":
         if 'categoria_seleccionada' in st.session_state and st.session_state.categoria_seleccionada:
             
             st.markdown("---")
-            st.header("🗺️ Geolocalización de Oferta Académica")
+            st.header("🗺️ Geolocalización de Oferta Académica (presencial y virtual)")
             
             # Obtenemos los datos necesarios del estado
             categoria = st.session_state.categoria_seleccionada
