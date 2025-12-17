@@ -256,13 +256,13 @@ elif opcion == "📝 Test Vocacional":
             # Pasamos el DataFrame crudo que ya tenemos cargado (eda_engine.df_matricula)
             # Asegúrate de usar el dataframe correcto disponible en tu scope
             if 'eda_engine' in locals() and eda_engine is not None:
-                 map_module.generar_mapa_oferta(eda_engine.df_matricula, keywords, nombre_cat)
+                 src.map_module.generar_mapa_oferta(eda_engine.df_matricula, keywords, nombre_cat)
             else:
                  # Fallback si eda_engine no está instanciado localmente (ej. recarga de página)
                  dm_temp = DataManager()
                  # Nota: idealmente esto ya está en caché, no debería tardar
-                 if dm_temp.load_data('matricula_senescyt_2015_2023.csv', 'encuentra_empleo_ofertas_2.csv', 'inec_enemdu_salarios.csv'):
-                     map_module.generar_mapa_oferta(dm_temp.df_matricula, keywords, nombre_cat)
+                 if dm_temp.load_data('data/matricula_senescyt_2015_2023.csv', 'data/encuentra_empleo_ofertas_2.csv', 'data/inec_enemdu_salarios.csv'):
+                     src.map_module.generar_mapa_oferta(dm_temp.df_matricula, keywords, nombre_cat)
             
     except AttributeError:
         st.error("Error: Verifica que 'test.py' y 'map_module.py' estén en la carpeta correcta.")

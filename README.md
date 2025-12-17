@@ -25,6 +25,7 @@ SIC-Sistema-de-recomendacion-de-Carreras-Basado-en-la-empleabilidad-y-proyecci0n
 │   ├── eda_module.py              # Generación de gráficos estadísticos (Plotly)
 │   ├── clustering_module.py       # Algoritmo K-Means y visualización 3D
 │   ├── nlp_module.py              # Motor de recomendación semántica (TF-IDF)
+│   ├── map_module.py              # Mapa de las carreras luego del test vocacional
 │   └── prediction_module.py       # Modelo predictivo Random Forest (Data Augmentation)
 │
 ├── notebooks/                     # Jupyter Notebooks de experimentación (Prototipos)
