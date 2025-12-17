@@ -2,9 +2,8 @@ import streamlit as st
 import pandas as pd
 
 def cargar_datos():
-    """Carga los datos del CSV"""
     try:
-        df = pd.read_csv('matricula_senescyt_2015_2023.csv')
+        df = pd.read_csv('data/matricula_senescyt_2015_2023.csv')
         # Limpiar espacios en blanco
         df['carrera'] = df['carrera'].str.strip()
         df['universidad'] = df['universidad'].str.strip()
@@ -15,7 +14,6 @@ def cargar_datos():
         return pd.DataFrame()
 
 def inicializar_estado():
-    """Inicializa las variables de sesión"""
     if 'pregunta_actual' not in st.session_state:
         st.session_state.pregunta_actual = 0
     if 'respuestas' not in st.session_state:
@@ -26,7 +24,6 @@ def inicializar_estado():
         st.session_state.categoria_seleccionada = None
 
 def obtener_preguntas():
-    """Define las preguntas y opciones del quiz"""
     return [
         {
             'id': 'work_environment',
@@ -95,7 +92,6 @@ def obtener_preguntas():
     ]
 
 def obtener_categorias():
-    """Define las categorías de carreras y sus keywords"""
     return {
         'tech': {
             'nombre': 'Tecnología e Informática',
@@ -165,7 +161,6 @@ def obtener_categorias():
     }
 
 def calcular_resultados(respuestas, preguntas):
-    """Calcula los scores de cada categoría basado en las respuestas"""
     categorias = obtener_categorias()
     scores = {cat: 0 for cat in categorias.keys()}
     
@@ -175,8 +170,7 @@ def calcular_resultados(respuestas, preguntas):
         
         for categoria, peso in pesos.items():
             scores[categoria] += peso
-    
-    # Ordenar por score y obtener top 3
+
     sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)[:3]
     max_score = max(scores.values()) if scores.values() else 1
     
@@ -194,49 +188,104 @@ def calcular_resultados(respuestas, preguntas):
     
     return resultados
 
+def limpiar_datos_universidades(df):
+
+    universidades_validas = {
+        'Escuela Politécnica Nacional': ['Pichincha'],
+        'Universidad Central del Ecuador': ['Pichincha'],
+        'Universidad de Guayaquil': ['Guayas'],
+        'Universidad de Cuenca': ['Azuay'],
+        'Escuela Superior Politécnica del Litoral': ['Guayas'],
+        'Universidad de las Fuerzas Armadas': ['Pichincha', 'Sangolquí'],
+        'Universidad Técnica de Ambato': ['Tungurahua'],
+        'Universidad Técnica de Manabí': ['Manabí'],
+        'Universidad Nacional de Loja': ['Loja'],
+        'Universidad Estatal de Milagro': ['Guayas'],
+        'Universidad Técnica del Norte': ['Imbabura'],
+        'Universidad Técnica de Machala': ['El Oro'],
+        'Universidad Laica Eloy Alfaro de Manabí': ['Manabí'],
+        'Universidad Estatal de Bolívar': ['Bolívar'],
+        'Universidad Nacional de Chimborazo': ['Chimborazo'],
+        'Universidad Técnica de Cotopaxi': ['Cotopaxi'],
+        'Universidad Técnica de Babahoyo': ['Los Ríos'],
+        'Escuela Superior Politécnica de Chimborazo': ['Chimborazo'],
+        'Escuela Superior Politécnica Agropecuaria de Manabí': ['Manabí'],
+        'Universidad San Francisco de Quito': ['Pichincha'],
+        'Pontificia Universidad Católica del Ecuador': ['Pichincha'],
+        'Universidad de las Américas': ['Pichincha'],
+        'Universidad Internacional del Ecuador': ['Pichincha'],
+        'Universidad de Especialidades Espíritu Santo': ['Guayas'],
+        'Universidad Católica de Santiago de Guayaquil': ['Guayas'],
+        'Universidad Casa Grande': ['Guayas'],
+        'Universidad del Azuay': ['Azuay'],
+        'Universidad Católica de Cuenca': ['Azuay'],
+        'Universidad de Especialidades Turísticas': ['Pichincha'],
+        'Universidad Tecnológica Equinoccial': ['Pichincha'],
+        'Universidad Tecnológica Indoamérica': ['Pichincha', 'Tungurahua'],
+        'Universidad Israel': ['Pichincha'],
+        'Universidad Iberoamericana del Ecuador': ['Pichincha'],
+        'Universidad Técnica Particular de Loja': ['Loja', 'Azuay', 'Guayas', 'Pichincha', 'El Oro'],
+    }
+
+    df_limpio = []
+    for _, row in df.iterrows():
+        universidad = row['universidad']
+        provincia = row['provincia']
+
+        if universidad in universidades_validas:
+            if provincia in universidades_validas[universidad]:
+                df_limpio.append(row)
+        else:
+            df_limpio.append(row)
+    
+    return pd.DataFrame(df_limpio)
+
 def obtener_universidades(df, keywords):
-    """Obtiene universidades que ofrecen carreras relacionadas con las keywords"""
-    # Filtrar carreras que coincidan con keywords
     mask = df['carrera'].str.lower().apply(
         lambda x: any(keyword.lower() in x for keyword in keywords)
     )
     carreras_filtradas = df[mask]
-    
-    # Agrupar por universidad y provincia
+
+    carreras_filtradas = limpiar_datos_universidades(carreras_filtradas)
+
+    if not carreras_filtradas.empty:
+        año_reciente = carreras_filtradas['año'].max()
+        carreras_filtradas = carreras_filtradas[carreras_filtradas['año'] >= año_reciente - 1]
+
     universidades = []
     for (universidad, provincia) in carreras_filtradas.groupby(['universidad', 'provincia']).groups.keys():
         datos_uni = carreras_filtradas[
             (carreras_filtradas['universidad'] == universidad) & 
             (carreras_filtradas['provincia'] == provincia)
         ]
+
+        carreras_list = datos_uni['carrera'].unique().tolist()
+        total_estudiantes = datos_uni['num_estudiantes'].sum()
         
         universidades.append({
             'nombre': universidad,
             'provincia': provincia,
-            'carreras': datos_uni['carrera'].unique().tolist()
+            'carreras': carreras_list,
+            'total_estudiantes': total_estudiantes
         })
+
+    universidades.sort(key=lambda x: (len(x['carreras']), x['total_estudiantes']), reverse=True)
     
-    # Ordenar por número de carreras
-    universidades.sort(key=lambda x: len(x['carreras']), reverse=True)
-    
-    return universidades[:15]  # Top 15
+    return universidades[:20] 
 
 def mostrar_quiz():
-    """Función principal del quiz"""
-    st.title("Test de Orientación Vocacional")
-    
-    # Inicializar estado
+
+    st.title(" Test de Orientación Vocacional")
+
     inicializar_estado()
-    
-    # Cargar datos
+ 
     df = cargar_datos()
     if df.empty:
         st.error("No se pudieron cargar los datos del CSV")
         return
     
     preguntas = obtener_preguntas()
-    
-    # Mostrar universidades si hay categoría seleccionada
+
     if st.session_state.categoria_seleccionada:
         categoria = st.session_state.categoria_seleccionada
         
@@ -254,10 +303,15 @@ def mostrar_quiz():
         
         if universidades:
             for uni in universidades:
-                with st.expander(f"📍 {uni['nombre']} - {uni['provincia']}"):
-                    st.write(f"**📌 Ubicación:** {uni['provincia']}")
-                    st.write(f"** Carreras disponibles:** {len(uni['carreras'])}")
+                with st.expander(f"📍 {uni['nombre']} - {uni['provincia']} ({len(uni['carreras'])} carrera{'s' if len(uni['carreras']) > 1 else ''})"):
+                    col1, col2 = st.columns([2, 1])
+                    with col1:
+                        st.write(f"**📌 Ubicación:** {uni['provincia']}")
+                    with col2:
+                        st.metric("Estudiantes", f"{uni['total_estudiantes']:,}")
+                    
                     st.divider()
+                    st.write("** Carreras disponibles:**")
                     for carrera in uni['carreras']:
                         st.write(f"• {carrera}")
         else:
@@ -312,7 +366,7 @@ def mostrar_quiz():
     st.divider()
     
     # Pregunta
-    st.subheader(f"{pregunta_actual['pregunta']}")
+    st.subheader(f" {pregunta_actual['pregunta']}")
     
     # Opciones
     respuesta = st.radio(

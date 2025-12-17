@@ -4,7 +4,9 @@
 
 **CareerMatch AI** es un sistema de inteligencia artificial diseñado para conectar la oferta académica con la demanda laboral real en **Ecuador**.
 
-Utilizando técnicas de **Machine Learning** y **Procesamiento de Lenguaje Natural (NLP)**, el sistema analiza datos históricos de matrículas universitarias (SENESCYT), ofertas de empleo reales y estadísticas salariales. Su objetivo es recomendar carreras con alta empleabilidad, predecir la saturación del mercado mediante modelos de clasificación y orientar tanto a estudiantes como a responsables de políticas educativas mediante una interfaz interactiva.
+Utilizando técnicas de **Machine Learning** y **Procesamiento de Lenguaje Natural (NLP)**, el sistema analiza datos históricos de matrículas universitarias (SENESCYT), ofertas de empleo reales y estadísticas salariales. Su objetivo es recomendar carreras con alta empleabilidad, predecir la saturación del mercado mediante modelos de clasificación y orientar tanto a estudiantes como a responsables de políticas educativas mediante una interfaz interactiva, en la cual el usuario podrá observar una recomendación dirigida a mejorar su decisión tanto académica como profesional.
+
+Este proyecto busca hacer la búsqueda vocacional mucho más interactiva y práctica, mediante la cual los estudiantes puedan tomar decisiones mucho más acertadas.
 
 ---
 
@@ -14,6 +16,7 @@ Utilizando técnicas de **Machine Learning** y **Procesamiento de Lenguaje Natur
 SIC-Sistema-de-recomendacion-de-Carreras-Basado-en-la-empleabilidad-y-proyecci0n-de-mercado/
 │
 ├── data/                          # Almacenamiento de las bases de datos (Inputs)
+│   ├── test.py
 │   ├── encuentra_empleo_ofertas_2.csv
 │   ├── inec_enemdu_salarios.csv
 │   └── matricula_senescyt_2015_2023.csv
