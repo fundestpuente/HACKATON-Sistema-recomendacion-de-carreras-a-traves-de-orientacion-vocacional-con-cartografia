@@ -7,6 +7,7 @@ from src.nlp_module import NLPRecommender
 from src.clustering_module import CareerClusterer, plot_clusters_3d
 from src.prediction_module import CareerPredictor
 from src.eda_module import EDAModule
+import quizz
 
 # --- CONFIGURACIÓN DE PÁGINA ---
 st.set_page_config(
@@ -81,7 +82,8 @@ opcion = st.sidebar.radio("Menú Principal:", [
     "📊 Análisis de Mercado", 
     "🤖 Clustering (Segmentación)", 
     "🔍 Recomendador Vocacional", 
-    "🔮 Simulador Futuro"
+    "🔮 Simulador Futuro",
+    "📝 Test Vocacional"
 ])
 st.sidebar.markdown("---")
 st.sidebar.info(f"✅ Base de Datos: {len(df_final)} carreras activas.")
@@ -231,3 +233,13 @@ elif opcion == "🔮 Simulador Futuro":
         
         st.write("##### Probabilidades:")
         st.bar_chart(pd.DataFrame.from_dict(probs, orient='index', columns=['%']))
+
+# --- PÁGINA: TEST VOCACIONAL ---
+elif opcion == "📝 Test Vocacional":
+    try:
+        # Ejecutamos la función de quizz.py
+        quizz.mostrar_quiz()
+    except AttributeError:
+        st.error("Error: No se encontró la función 'mostrar_quiz' en test.py.")
+    except Exception as e:
+        st.error(f"Ocurrió un error al cargar el test: {e}")
