@@ -16,7 +16,6 @@ Este proyecto busca hacer la búsqueda vocacional mucho más interactiva y prác
 SIC-Sistema-de-recomendacion-de-Carreras-Basado-en-la-empleabilidad-y-proyecci0n-de-mercado/
 │
 ├── data/                          # Almacenamiento de las bases de datos (Inputs)
-│   ├── quizz.py
 │   ├── encuentra_empleo_ofertas_2.csv
 │   ├── inec_enemdu_salarios.csv
 │   └── matricula_senescyt_2015_2023.csv
@@ -35,6 +34,7 @@ SIC-Sistema-de-recomendacion-de-Carreras-Basado-en-la-empleabilidad-y-proyecci0n
 │   └── 04_Modelos_Prediccion.ipynb 
 │
 ├── CareerMatchAI.py               # Aplicación Principal (Frontend - Streamlit)
+├── quizz.py
 ├── requirements.txt               # Dependencias del proyecto
 └── README.md                      # Este archivo.
 ```
